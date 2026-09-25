@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b6437" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Figueiras" />
+  <title>ADC Figueiras · Clube</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><img src="assets/adc-figueiras-emblema.png" alt="Emblema ADC Figueiras" /></div>
+        <div><strong>ADC Figueiras</strong><span>Clube · V2 Preview</span></div>
+      </div>
+
+      <div class="season-switch">
+        <label>Época</label>
+        <select id="seasonSelect"></select>
+      </div>
+
+      <nav class="nav" id="nav"></nav>
+
+      <div class="sidebar-foot">
+        <div class="profile-mini">
+          <div class="avatar">DT</div>
+          <div><strong id="profileName">David</strong><small id="profileRoles">Jogador · Equipa técnica · Admin</small></div>
+        </div>
+        <small>Preview local · preparada para backend</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+        <div class="page-head"><h1 id="pageTitle">Início</h1><p id="pageSubtitle">Visão geral do clube</p></div>
+        <div class="top-actions">
+          <select id="previewMode" class="preview-select" title="Pré-visualizar permissões">
+            <option value="admin">Vista Admin</option>
+            <option value="staff">Vista Equipa técnica</option>
+            <option value="player">Vista Jogador</option>
+            <option value="member">Vista Sócio</option>
+            <option value="public">Vista Pública</option>
+          </select>
+          <button class="icon-btn" id="notificationBell" title="Notificações">🔔<span class="count" id="notificationCount">0</span></button>
+        </div>
+      </header>
+
+      <div class="offline-banner hidden" id="offlineBanner">Sem ligação. A app continua disponível, mas a sincronização online ficará pendente.</div>
+
+      <section class="view active" id="view-dashboard"></section>
+      <section class="view" id="view-games"></section>
+      <section class="view" id="view-matchcenter"></section>
+      <section class="view" id="view-calendar"></section>
+      <section class="view" id="view-standings"></section>
+      <section class="view" id="view-stats"></section>
+      <section class="view" id="view-squad"></section>
+      <section class="view" id="view-training"></section>
+      <section class="view" id="view-weights"></section>
+      <section class="view" id="view-notifications"></section>
+      <section class="view" id="view-fines"></section>
+      <section class="view" id="view-seasons"></section>
+      <section class="view" id="view-people"></section>
+      <section class="view" id="view-settings"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <div class="modal-head"><div><h2 id="modalTitle"></h2><p id="modalSubtitle"></p></div><button class="icon-btn ghost" id="closeModal">✕</button></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <input type="file" id="importInput" accept="application/json" hidden />
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
