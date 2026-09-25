@@ -1,0 +1,39 @@
+name: Sync Zerozero
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install parser dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Synchronize competition data
+        run: python scripts/sync_zerozero.py
+
+      - name: Commit updated data when changed
+        run: |
+          if git diff --quiet -- data/competition.json; then
+            echo "No competition changes."
+            exit 0
+          fi
+          git config user.name "Figueiras Sync Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/competition.json
+          git commit -m "chore: sync competition data"
+          git push
