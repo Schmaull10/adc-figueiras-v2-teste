@@ -1,0 +1,26 @@
+{
+  "competition": "AF Porto I Divisão Futsal Série 2 2026/2027",
+  "season": "2026/27",
+  "source_url": "https://www.zerozero.pt/edicao/af-porto-i-divisao-futsal-serie-2-2026-2027/223354",
+  "updated_at": "2026-09-25T14:30:00Z",
+  "standings": [
+    {"position":1,"team":"AA Leça","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":2,"team":"AD Polenenses","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":3,"team":"AD Tarrio","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":4,"team":"ADC Figueiras","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":5,"team":"ARC Moinhos","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":6,"team":"Baguim do Monte","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":7,"team":"FC São Romão","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":8,"team":"Freixieiro","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":9,"team":"Juventude Gaia B","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":10,"team":"Juventude Matosinhos","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":11,"team":"Leais e Videirinhos","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":12,"team":"Monte das Pedras","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0},
+    {"position":13,"team":"Paço de Sousa","pts":0,"j":0,"v":0,"e":0,"d":0,"gf":0,"ga":0,"dg":0}
+  ],
+  "games": [
+    {"external_id":"zz-j1-fig-fre","round":"J1","date":"2026-10-02","time":"21:30","home":"ADC Figueiras","away":"Freixieiro","home_score":null,"away_score":null},
+    {"external_id":"zz-j2-pds-fig","round":"J2","date":"2026-10-09","time":"21:00","home":"Paço de Sousa","away":"ADC Figueiras","home_score":null,"away_score":null},
+    {"external_id":"zz-j3-fig-fcr","round":"J3","date":"2026-10-16","time":"21:30","home":"ADC Figueiras","away":"FC São Romão","home_score":null,"away_score":null}
+  ]
+}
