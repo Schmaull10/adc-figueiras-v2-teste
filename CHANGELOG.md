@@ -1,3 +1,14 @@
+# V2.8
+
+- Novo role Capitão, com acesso à gestão de multas.
+- Dashboard adaptado à função: Público/Sócio, Jogador, Capitão, Equipa Técnica e Admin.
+- Match Center: capitão por jogo, resultado ao intervalo discreto, não utilizados esbatidos.
+- Ficha do jogador: últimos 5 jogos visuais com adversário, G+A e disciplina; gráfico de evolução do peso na área interna.
+- Plantel em cartões visuais e novos estados: Disponível, Lesionado, Suspenso, Ausente e Em dúvida.
+- Página de equipa: histórico de confrontos vs ADC Figueiras entre épocas.
+- Backup mais visível e área de diagnóstico da aplicação.
+- Mantidas as correções anteriores: ordenação do 5 inicial e eliminação de jogos extra em Resultados.
+
 # ADC Figueiras V2 — atualização de perfis e Match Center
 
 - Página de cada equipa ao tocar no nome/emblema em Resultados ou Classificação.
