@@ -1,8 +1,12 @@
-# Changelog
+# ADC Figueiras V2 — atualização de perfis e Match Center
 
-## V2 manual standings
-- Removida a sincronização FPF/Zerozero e respetivos GitHub Actions.
-- Nova área **Resultados da série**.
-- Classificação recalculada automaticamente após cada resultado.
-- Jogos finalizados do ADC Figueiras entram automaticamente na classificação.
-- Mantidas as restantes funcionalidades da V2: Match Center, 5 inicial, estatísticas, pesagens, multas e regras de multas.
+- Página de cada equipa ao tocar no nome/emblema em Resultados ou Classificação.
+- Página de equipa com jogos, resultados, classificação atual e forma dos últimos 5 jogos concluídos.
+- Ficha de jogador alargada: número, posição, convocatórias, jogos, titularidades, golos, assistências, amarelos e vermelhos.
+- Dados internos da ficha (presenças/assiduidade, pesagens e multas) visíveis apenas nas vistas Jogador, Equipa Técnica e Admin.
+- Jogador convocado pode ficar como não utilizado; jogos e titularidades passam a respeitar utilização real.
+- Match Center do campeonato mostra intervalo automático aos 25 minutos.
+- 5 inicial apresentado em cinco quadrados: GR amarelo/preto; jogador preto/branco.
+- ADC Figueiras destacado a verde com texto branco em Resultados e Classificação.
+- Emblema normal do ADC Figueiras usado em Resultados/Classificação/páginas de equipa; emblema metálico mantido no branding e ícones da app.
+- Mantida a possibilidade de eliminar jogos extra criados manualmente em Resultados.

@@ -1,7 +1,7 @@
-const CACHE='adc-figueiras-v2-calendar-1';
+const CACHE='adc-figueiras-v2-profiles-1';
 const ASSETS=[
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest',
-  './assets/adc-figueiras-emblema.png','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'
+  './assets/adc-figueiras-emblema.png','./assets/adc-figueiras-logo-normal.png','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'
 ];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

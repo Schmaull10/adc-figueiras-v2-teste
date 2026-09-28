@@ -1,13 +1,7 @@
-# ADC Figueiras V2 — resultados manuais
+# ADC Figueiras V2
 
-Esta versão não depende de Zerozero, FPF ou GitHub Actions para a classificação.
+Build de teste com calendário completo 2026/27, resultados e classificação automáticos, páginas de equipa, fichas de jogador e Match Center.
 
-## Classificação
-- Regista os jogos do ADC Figueiras em **Jogos / Match Center**.
-- Regista os resultados dos restantes clubes em **Resultados da série**.
-- A classificação é calculada automaticamente.
-- Pontuação: 3 por vitória, 1 por empate, 0 por derrota.
-- Desempate provisório: pontos, diferença de golos e golos marcados.
-
-## Publicação
-Faz upload do conteúdo desta pasta para a raiz do GitHub Pages. Não é necessária pasta `.github`, `scripts` nem `data`.
+## Atualização no GitHub Pages
+Substituir os ficheiros da build anterior pelos deste pacote, incluindo a pasta `assets` e `data`.
+Antes de uma atualização em utilização real, exportar um backup JSON em Definições.
