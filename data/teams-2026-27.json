@@ -1,0 +1,144 @@
+[
+  {
+    "name": "ADC Figueiras",
+    "short": "Figueiras",
+    "logo": "assets/adc-figueiras-emblema.png",
+    "homeVenue": "Pavilhão Municipal de Nevogilde",
+    "aliases": [
+      "ADC Figueiras",
+      "Figueiras"
+    ]
+  },
+  {
+    "name": "AR Freixieiro",
+    "short": "Freixieiro",
+    "logo": "https://www.zerozero.pt/img_icon/44x50/logos/equipas/4371_imgbank.png",
+    "homeVenue": "Pavilhão Freixieiro",
+    "aliases": [
+      "AR Freixieiro",
+      "Freixieiro"
+    ]
+  },
+  {
+    "name": "GD Baguim Monte",
+    "short": "Baguim Monte",
+    "logo": "https://www.zerozero.pt/img_icon/logos/equipas/27244_imgbank_1677160331.png",
+    "homeVenue": "Pavilhão Municipal Baguim do Monte",
+    "aliases": [
+      "GD Baguim Monte",
+      "Baguim do Monte",
+      "Baguim Monte"
+    ]
+  },
+  {
+    "name": "FC Paço Sousa",
+    "short": "Paço Sousa",
+    "logo": "https://www.zerozero.pt/img_icon/logos/equipas/11125_imgbank_1723649873.png",
+    "homeVenue": "Pavilhão Desportivo Paço Sousa",
+    "aliases": [
+      "FC Paço Sousa",
+      "Paço de Sousa",
+      "Paço Sousa"
+    ]
+  },
+  {
+    "name": "AD Tarrio",
+    "short": "AD Tarrio",
+    "logo": "https://www.zerozero.pt/img_icon/logos/equipas/57153_imgbank.png",
+    "homeVenue": "Pavilhão Desportivo de Rebordões",
+    "aliases": [
+      "AD Tarrio",
+      "Tarrio"
+    ]
+  },
+  {
+    "name": "FC São Romão",
+    "short": "São Romão",
+    "logo": "https://www.zerozero.pt/img_icon/logos/equipas/11151_imgbank.png",
+    "homeVenue": "Pavilhão EB 2/3 São Romão Coronado",
+    "aliases": [
+      "FC São Romão",
+      "FCS. Romão",
+      "FCS Romão",
+      "São Romão"
+    ]
+  },
+  {
+    "name": "ARC Moinhos",
+    "short": "ARC Moinhos",
+    "logo": "https://www.zerozero.pt/img_icon/50x50/logos/equipas/47711_imgbank.png",
+    "homeVenue": "Pavilhão AR Moinhos P. Ferreira",
+    "aliases": [
+      "ARC Moinhos"
+    ]
+  },
+  {
+    "name": "AA Leça",
+    "short": "AA Leça",
+    "logo": "https://www.zerozero.pt/img_icon/50x50/logos/equipas/8086_imgbank.png",
+    "homeVenue": "Pavilhão Escola Secundária Boa Nova",
+    "aliases": [
+      "AA Leça",
+      "Ass. Académica Leça",
+      "Ass Académica Leça",
+      "Académica Leça"
+    ]
+  },
+  {
+    "name": "AD Polenenses",
+    "short": "Polenenses",
+    "logo": "https://www.zerozero.pt/img_icon/50x50/logos/equipas/33067_imgbank_1677160142.png",
+    "homeVenue": "Pavilhão Municipal de Custóias",
+    "aliases": [
+      "AD Polenenses",
+      "Atl. D. Polenenses",
+      "Atl D Polenenses",
+      "Polenenses"
+    ]
+  },
+  {
+    "name": "ASC Monte Pedras",
+    "short": "Monte Pedras",
+    "logo": "https://www.zerozero.pt/img_icon/50x50/logos/equipas/8156_imgbank.png",
+    "homeVenue": "Pavilhão Municipal Crestins",
+    "aliases": [
+      "ASC Monte Pedras",
+      "Monte das Pedras",
+      "Monte Pedras"
+    ]
+  },
+  {
+    "name": "Juventude Gaia B",
+    "short": "Juventude Gaia B",
+    "logo": "https://www.zerozero.pt/img_icon/logos/equipas/32412_imgbank.png",
+    "homeVenue": "Pavilhão Municipal Carlos Resende",
+    "aliases": [
+      "Juventude Gaia B",
+      "JD Gaia \"B\"",
+      "JD Gaia B",
+      "Juventude Gaia"
+    ]
+  },
+  {
+    "name": "Leais e Videirinhos",
+    "short": "Leais e Videirinhos",
+    "logo": "https://www.zerozero.pt/img_icon/50x50/logos/equipas/96814_imgbank.png",
+    "homeVenue": "Pavilhão Municipal de Pedrouços",
+    "aliases": [
+      "Leais e Videirinhos",
+      "A. Os Leais Videir. Pedrouços",
+      "Os Leais Videirinhos"
+    ]
+  },
+  {
+    "name": "Juventude Matosinhos",
+    "short": "Juventude Matosinhos",
+    "logo": "https://www.zerozero.pt/img_icon/50x50/logos/equipas/47719_imgbank.png",
+    "homeVenue": "Pavilhão Municipal Leça do Balio",
+    "aliases": [
+      "Juventude Matosinhos",
+      "GD Juventude Matosinhos SC",
+      "Juventude Matosinhos SC"
+    ]
+  }
+]
