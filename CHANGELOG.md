@@ -1,3 +1,10 @@
+# V2.10.0 — Ícones de navegação
+
+- Novo conjunto de ícones desportivos no menu lateral.
+- "Dashboard" apresentado como "Início".
+- Ícones consistentes para Resultados, Classificação, Estatísticas, Plantel, Treinos, Pesagens, Match Center, Multas, Regras de multas, Épocas, Equipas/gestão e Definições.
+- Mantida toda a lógica e estrutura de dados da V2.9.
+
 # V2.9
 
 ## Resultados e Taça AF Porto

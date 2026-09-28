@@ -1,4 +1,4 @@
-const CACHE='adc-figueiras-v2-9';
+const CACHE='adc-figueiras-v2-10';
 const ASSETS=[
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest',
   './assets/adc-figueiras-emblema.png','./assets/adc-figueiras-logo-normal.png','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'

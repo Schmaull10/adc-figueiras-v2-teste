@@ -4,7 +4,7 @@ const V2_KEY='adc-figueiras-team-manager-v2';
 const V1_KEY='adc-figueiras-team-manager-v1';
 const MODE_KEY='adc-figueiras-v2-preview-mode';
 const AUTO_BACKUP_KEY='adc-figueiras-team-manager-v2-autobackup';
-const APP_VERSION='2.9.0';
+const APP_VERSION='2.10.0';
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const pad=n=>String(n).padStart(2,'0');
@@ -140,11 +140,50 @@ const viewInfo={
  dashboard:['Início','Visão geral do clube'],games:['Jogos','Calendário, resultados e fichas de jogo'],matchcenter:['Match Center','Cronologia e acontecimentos do jogo'],calendar:['Calendário','Treinos e jogos'],seriesResults:['Resultados','Campeonato e Taça AF Porto'],standings:['Classificação','Calculada automaticamente pelos resultados'],team:['Equipa','Jogos, forma recente e resultados'],stats:['Estatísticas','Jogadores e equipa'],player:['Ficha de jogador','Perfil e estatísticas individuais'],squad:['Plantel','Jogadores e disponibilidade'],training:['Treinos','Presenças e pesagens'],weights:['Pesagens','Histórico e evolução do plantel'],notifications:['Notificações','Comunicação com atletas e sócios'],fines:['Multas','Registo interno'],fineRules:['Regras de multas','Motivos e automatismos'],seasons:['Épocas','Arquivo histórico'],people:['Pessoas e acessos','Utilizadores e múltiplas funções'],settings:['Definições','Dados, backups e integrações']
 };
 
+const NAV_ICONS={
+ home:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5H15v-6H9v6H4.5A1.5 1.5 0 0 1 3 19.5z"/></svg>`,
+ fixture:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 2v4M17 2v4M3 9h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="14.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m12 12.3 1.5 1.1-.6 1.8h-1.8l-.6-1.8z"/></svg>`,
+ calendar:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 3v4M17 3v4M3 10h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 14h3M14 14h3M7 18h3M14 18h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+ scoreboard:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 5v14" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/><path d="M6 10.5c.4-1 1.3-1.5 2.3-1.5 1.2 0 2.2.7 2.2 1.8 0 1.2-.8 1.8-2.8 3.7h3M15 10h3M16.5 8.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+ podium:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h6v13H9zM3 13h6v8H3zM15 11h6v10h-6z"/><path d="m12 2 .9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z"/></svg>`,
+ stats:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>`,
+ shirt:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 3c.7 1 1.9 1.7 3.5 1.7S14.8 4 15.5 3L21 5.5l-2.5 5-2.5-1.2V21H8V9.3L5.5 10.5 3 5.5z"/></svg>`,
+ cone:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 3h5L19 19H5z"/><path d="M7.6 12h8.8M6.4 16h11.2" fill="none" stroke="#fff" stroke-width="1.7" opacity=".9"/><rect x="3" y="19" width="18" height="2" rx="1"/></svg>`,
+ scale:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="4"/><path d="M8 9a4 4 0 0 1 8 0" fill="none" stroke="#073c2a" stroke-width="1.8"/><path d="m12 9 2-2" fill="none" stroke="#073c2a" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="9" r="1" fill="#073c2a"/></svg>`,
+ ball:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12 7 3 2.2-1.1 3.5h-3.8L9 9.2z"/><path d="m9 9.2-3.2-.4M15 9.2l3.2-.4M10.1 12.7l-2 3M13.9 12.7l2 3M8.1 15.7l.5 3.1M15.9 15.7l-.5 3.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>`,
+ bell:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17h14l-1.6-2.1V10a5.4 5.4 0 0 0-4.2-5.3V3h-2.4v1.7A5.4 5.4 0 0 0 6.6 10v4.9z"/><path d="M9.5 19a2.6 2.6 0 0 0 5 0z"/></svg>`,
+ banknote:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="3" fill="#073c2a"/><path d="M5 9c1.4 0 2.5-1.1 2.5-2.5M19 9c-1.4 0-2.5-1.1-2.5-2.5M5 15c1.4 0 2.5 1.1 2.5 2.5M19 15c-1.4 0-2.5 1.1-2.5 2.5" fill="none" stroke="#073c2a" stroke-width="1.3"/></svg>`,
+ gavel:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13.8 4.2 6 6-2.5 2.5-6-6zM8.6 7.3l8.1 8.1-2.5 2.5-8.1-8.1zM4 18h9v3H4z"/></svg>`,
+ season:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="15" r="1.2"/><circle cx="15" cy="15" r="1.2"/><circle cx="12" cy="18" r="1.2"/></svg>`,
+ shield:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 20 5v6c0 5.2-3.3 8.8-8 11-4.7-2.2-8-5.8-8-11V5z"/><path d="M12 6v11" fill="none" stroke="#fff" stroke-width="1.5" opacity=".55"/></svg>`,
+ users:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3" opacity=".75"/><path d="M3 20c.5-4.1 2.5-6 6-6s5.5 1.9 6 6zM14.5 15.2c3.4-.4 5.5 1.2 6.5 4.8h-5.2c-.2-1.9-.7-3.5-1.3-4.8z"/></svg>`,
+ sliders:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h7M15 6h5M4 12h3M11 12h9M4 18h10M18 18h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="13" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="16" cy="18" r="2"/></svg>`
+};
+function navIcon(name){return NAV_ICONS[name]||NAV_ICONS.shield}
+
 const navDefs=[
- {group:'Clube',items:[['dashboard','⌂','Início'],['games','⚽','Jogos'],['calendar','▦','Calendário'],['seriesResults','≡','Resultados'],['standings','🏆','Classificação'],['stats','▥','Estatísticas']]},
- {group:'Equipa',items:[['squad','◉','Plantel'],['training','△','Treinos'],['weights','⚖','Pesagens'],['matchcenter','●','Match Center']]},
- {group:'Comunicação',items:[['notifications','🔔','Notificações']]},
- {group:'Gestão',items:[['fines','€','Multas'],['fineRules','≣','Regras de multas'],['seasons','↻','Épocas'],['people','♟','Pessoas e acessos'],['settings','⚙','Definições']]}
+ {group:'Clube',items:[
+  ['dashboard','home','Início','#ffffff'],
+  ['games','fixture','Jogos','#ff6b57'],
+  ['calendar','calendar','Calendário','#f472b6'],
+  ['seriesResults','scoreboard','Resultados','#60a5fa'],
+  ['standings','podium','Classificação','#fbbf24'],
+  ['stats','stats','Estatísticas','#34d399']
+ ]},
+ {group:'Equipa',items:[
+  ['squad','shirt','Plantel','#a78bfa'],
+  ['training','cone','Treinos','#fb923c'],
+  ['weights','scale','Pesagens','#36d1c4'],
+  ['matchcenter','ball','Match Center','#ff625c']
+ ]},
+ {group:'Comunicação',items:[['notifications','bell','Notificações','#fbbf24']]},
+ {group:'Gestão',items:[
+  ['fines','banknote','Multas','#fbbf24'],
+  ['fineRules','gavel','Regras de multas','#60a5fa'],
+  ['seasons','season','Épocas','#f472b6'],
+  ['people','users','Pessoas e acessos','#8bafff'],
+  ['settings','sliders','Definições','#d7dee8']
+ ]}
 ];
 const access={
  public:['dashboard','games','calendar','seriesResults','standings','team','stats','player'],
@@ -310,7 +349,7 @@ function renderChrome(){
  $('#previewMode').value=mode;
  const seasonSel=$('#seasonSelect');seasonSel.innerHTML=state.seasons.filter(s=>!s.archived||s.id===state.settings.activeSeasonId).map(s=>`<option value="${s.id}" ${s.id===state.settings.activeSeasonId?'selected':''}>${esc(s.label)}</option>`).join('');
  const user=currentUser();$('#profileName').textContent=user?.name||'Utilizador';$('#profileRoles').textContent=(user?.roles||[]).map(roleLabel).join(' · ');
- let html='';navDefs.forEach(gr=>{const items=gr.items.filter(i=>can(i[0]));if(!items.length)return;html+=`<div class="nav-group">${gr.group}</div>`+items.map(i=>`<button class="nav-item ${currentView===i[0]?'active':''}" data-view="${i[0]}"><span class="nav-icon">${i[1]}</span>${i[2]}</button>`).join('')});$('#nav').innerHTML=html;
+ let html='';navDefs.forEach(gr=>{const items=gr.items.filter(i=>can(i[0]));if(!items.length)return;html+=`<div class="nav-group">${gr.group}</div>`+items.map(i=>`<button class="nav-item ${currentView===i[0]?'active':''}" data-view="${i[0]}"><span class="nav-icon" style="--nav-icon-color:${i[3]}">${navIcon(i[1])}</span><span class="nav-label">${i[2]}</span></button>`).join('')});$('#nav').innerHTML=html;
  $$('.nav-item').forEach(b=>b.onclick=()=>showView(b.dataset.view));
  const unread=state.notifications.filter(n=>!n.read&&notificationVisible(n)).length;$('#notificationCount').textContent=unread;$('#notificationCount').classList.toggle('hidden',!unread);
 }
