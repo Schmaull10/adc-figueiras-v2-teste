@@ -1,28 +1,20 @@
-# V2.8
+# V2.9
 
-- Novo role Capitão, com acesso à gestão de multas.
-- Dashboard adaptado à função: Público/Sócio, Jogador, Capitão, Equipa Técnica e Admin.
-- Match Center: capitão por jogo, resultado ao intervalo discreto, não utilizados esbatidos.
-- Ficha do jogador: últimos 5 jogos visuais com adversário, G+A e disciplina; gráfico de evolução do peso na área interna.
-- Plantel em cartões visuais e novos estados: Disponível, Lesionado, Suspenso, Ausente e Em dúvida.
-- Página de equipa: histórico de confrontos vs ADC Figueiras entre épocas.
-- Backup mais visível e área de diagnóstico da aplicação.
-- Mantidas as correções anteriores: ordenação do 5 inicial e eliminação de jogos extra em Resultados.
+## Resultados e Taça AF Porto
+- Adicionada a competição **Taça AF Porto**.
+- Na Taça são apresentados apenas os jogos do ADC Figueiras.
+- Novo filtro em Resultados: **Todos os jogos / Campeonato / Taça AF Porto**.
+- Campeonato mantém a coluna **Jornada**; Taça usa **Ronda**.
+- Quando são mostradas as duas competições, aparecem em blocos separados na mesma página para preservar o cabeçalho correto.
+- Botão **+ Jogo da Taça** na página Resultados.
+- Os jogos da Taça não contam para a classificação.
 
-# ADC Figueiras V2 — atualização de perfis e Match Center
+## Match Center
+- Ao selecionar cartão amarelo ou vermelho, o campo **Assistência** é ocultado automaticamente.
+- A assistência é limpa ao guardar um cartão, evitando dados residuais.
+- Acontecimentos manuais da cronologia podem agora ser eliminados diretamente.
+- O intervalo automático dos jogos de campeonato continua protegido e não pode ser eliminado.
 
-- Página de cada equipa ao tocar no nome/emblema em Resultados ou Classificação.
-- Página de equipa com jogos, resultados, classificação atual e forma dos últimos 5 jogos concluídos.
-- Ficha de jogador alargada: número, posição, convocatórias, jogos, titularidades, golos, assistências, amarelos e vermelhos.
-- Dados internos da ficha (presenças/assiduidade, pesagens e multas) visíveis apenas nas vistas Jogador, Equipa Técnica e Admin.
-- Jogador convocado pode ficar como não utilizado; jogos e titularidades passam a respeitar utilização real.
-- Match Center do campeonato mostra intervalo automático aos 25 minutos.
-- 5 inicial apresentado em cinco quadrados: GR amarelo/preto; jogador preto/branco.
-- ADC Figueiras destacado a verde com texto branco em Resultados e Classificação.
-- Emblema normal do ADC Figueiras usado em Resultados/Classificação/páginas de equipa; emblema metálico mantido no branding e ícones da app.
-- Mantida a possibilidade de eliminar jogos extra criados manualmente em Resultados.
-
-## Ajuste Match Center / Resultados
-- 5 inicial: guarda-redes sempre à esquerda; restantes jogadores ordenados por número crescente.
-- Resultados: jogos extra de outros clubes podem ser eliminados diretamente na tabela, sem abrir o formulário.
-- Mantida a opção de eliminar o jogo extra dentro do formulário de edição.
+## Outros
+- Em Jogos, encontros da Taça passam a mostrar **Ronda** em vez de Jornada.
+- Mantida a mesma chave de armazenamento V2 para preservar os dados existentes.
