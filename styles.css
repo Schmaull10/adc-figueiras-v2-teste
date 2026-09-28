@@ -24,3 +24,5 @@
 
 .player .avatar.number{background:linear-gradient(145deg,#103b25,#0b6437);font-size:13px;font-weight:900}.check-inline{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:11px;white-space:nowrap}.check-inline input{accent-color:var(--green)}
 .sync-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid #cfe4d7;border-radius:13px;background:#edf7f1}.sync-strip strong{display:block;font-size:12px}.sync-strip span{display:block;font-size:10px;color:var(--muted);margin-top:2px}@media(max-width:600px){.sync-strip{align-items:flex-start;flex-direction:column}}
+
+.result-filter{min-width:190px}.result-filter select{min-width:190px}.club-result-row{cursor:pointer;background:#fbfefc}.club-result-row:hover{background:#eaf6ef!important}.club-result-row td:first-child{box-shadow:inset 3px 0 0 var(--green)}@media(max-width:600px){.result-filter{min-width:0;flex:1 1 140px}.result-filter select{min-width:0}}
