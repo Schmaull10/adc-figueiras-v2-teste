@@ -1,4 +1,4 @@
-const CACHE='adc-figueiras-v2-profiles-1';
+const CACHE='adc-figueiras-v2-matchorder-delete-2';
 const ASSETS=[
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest',
   './assets/adc-figueiras-emblema.png','./assets/adc-figueiras-logo-normal.png','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'

@@ -10,3 +10,8 @@
 - ADC Figueiras destacado a verde com texto branco em Resultados e Classificação.
 - Emblema normal do ADC Figueiras usado em Resultados/Classificação/páginas de equipa; emblema metálico mantido no branding e ícones da app.
 - Mantida a possibilidade de eliminar jogos extra criados manualmente em Resultados.
+
+## Ajuste Match Center / Resultados
+- 5 inicial: guarda-redes sempre à esquerda; restantes jogadores ordenados por número crescente.
+- Resultados: jogos extra de outros clubes podem ser eliminados diretamente na tabela, sem abrir o formulário.
+- Mantida a opção de eliminar o jogo extra dentro do formulário de edição.
